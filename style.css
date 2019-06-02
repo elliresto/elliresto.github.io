@@ -26,8 +26,8 @@ body {
 #switcher {
     position: absolute;
     cursor: pointer;
-    left: 85px;
-    top: 72px;
+    left: 4rem;
+    top: 5rem;
 }
 
 #main {
@@ -54,6 +54,7 @@ h4 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 8px;
+    font-family: "Buenos Aires";
 }
 
 p {
@@ -61,12 +62,43 @@ p {
     line-height: 25px;
 }
 
+a {
+    text-decoration: none;
+}
+
+#order a {
+    padding-bottom: 19px;
+}
+
+.day #order a {
+    border-bottom: 4px solid #18332F;
+}
+
+.night #order a {
+    border-bottom: 4px solid #EAE5E4;
+}
+
+#order {
+    margin-top: 46px;
+    font-size: 29px;
+    font-weight: bold;
+    font-family: "Buenos Aires";
+}
+
 .day {
     background-color: #EAE5E4;
-    color: #18332F;
 }
 
 .night {
     background-color: #152725;
+}
+
+.day,
+.day a {
+    color: #18332F;
+}
+
+.night,
+.night a {
     color: #EAE5E4;
 }
