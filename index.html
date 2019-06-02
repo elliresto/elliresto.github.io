@@ -15,7 +15,46 @@
 </head>
 
 <body>
-    Hello world
+    <img id="switcher" onclick="switchMode()">
+    <div id="main">
+        <div id="content">
+            <img id="logo">
+            <div class="block">
+                <h4>horaire</h4>
+                <p>
+                    Ouvert mercredi,jeudi vendredi et samedi
+                </p>
+                <p>
+                    17h à 22h
+                </p>
+            </div>
+            <div class="block">
+                <h4>adresse</h4>
+                <p>
+                    815 Rue Saint-Augustin, Québec, QC G1R 3N4
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const setMode = (mode) => {
+            const src = mode === 'day' ? 'night': 'day'
+            body.classList = [mode]
+            document.getElementById('logo').src = `images/signature_elli_${src}.svg`
+            document.getElementById('switcher').src = `images/button_${mode}.svg`
+        }
+
+        const switchMode = () => {
+            const actualMode = document.getElementsByTagName('body')[0].classList[0]
+            setMode(actualMode === 'day'? 'night': 'day')
+        }
+
+        const currentDate = new Date()
+        const body = document.getElementsByTagName('body')[0]
+        const mode = 7 <= currentDate.getHours() < 19 ? 'day' : 'night'
+        setMode(mode)
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,72 @@
+/* 
+ TODOS vseguin
+ * Add reservez + animation
+ * Add favicon
+*/
+
+@font-face {
+    font-family: "Suisse Mono";
+    src: url("fonts/SuisseIntlMono-Regular.otf");
+  }
+  
+  @font-face {
+    font-family: "Buenos Aires";
+    src: url("fonts/BuenosAires-Bold.otf");
+  }
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    transition: background-color 1s ease-in-out;
+}
+
+#switcher {
+    position: absolute;
+    cursor: pointer;
+    left: 85px;
+    top: 72px;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    font-family: "Suisse Mono";
+    height: 100%;
+}
+
+#content {
+    align-self: center;
+    max-width: 255px;
+}
+
+#content img {
+    margin-bottom: 102px;
+}
+
+.block {
+    margin-bottom: 17px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.day {
+    background-color: #EAE5E4;
+    color: #18332F;
+}
+
+.night {
+    background-color: #152725;
+    color: #EAE5E4;
+}
