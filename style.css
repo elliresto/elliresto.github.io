@@ -1,6 +1,6 @@
 /* 
  TODOS vseguin
- * Add reservez + animation
+ * Add reservez animation
  * Add favicon
 */
 
@@ -28,6 +28,12 @@ body {
     cursor: pointer;
     left: 4rem;
     top: 5rem;
+}
+
+@media (max-width: 800px) {
+    #switcher {
+        display: none;
+    }    
 }
 
 #main {
