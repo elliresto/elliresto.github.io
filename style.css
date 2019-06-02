@@ -72,16 +72,25 @@ a {
     text-decoration: none;
 }
 
-#order a {
-    padding-bottom: 19px;
+#order a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    padding-top: 19px;
+    border-bottom: 4px solid;
+    transition: .5s;
 }
 
-.day #order a {
-    border-bottom: 4px solid #18332F;
+#order a:hover:after {
+    width: 96%;
 }
 
-.night #order a {
-    border-bottom: 4px solid #EAE5E4;
+.day #order a:after {
+    border-bottom-color: #18332F;
+}
+
+.night #order a:after {
+    border-bottom-color: #EAE5E4;
 }
 
 #order {
