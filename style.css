@@ -66,6 +66,10 @@ a {
     text-decoration: none;
 }
 
+.link {
+    margin-top: 10px;
+}
+
 .link a:after {
     content: "";
     display: block;
@@ -88,7 +92,7 @@ a {
 }
 
 #links {
-    margin-top: 46px;
+    margin-top: 36px;
     font-size: 29px;
     font-weight: bold;
     font-family: "Buenos Aires";
