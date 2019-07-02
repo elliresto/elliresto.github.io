@@ -66,7 +66,7 @@ a {
     text-decoration: none;
 }
 
-#order a:after {
+.link a:after {
     content: "";
     display: block;
     width: 0%;
@@ -75,19 +75,19 @@ a {
     transition: .5s;
 }
 
-#order a:hover:after {
+.link a:hover:after {
     width: 96%;
 }
 
-.day #order a:after {
+.day .link a:after {
     border-bottom-color: #18332F;
 }
 
-.night #order a:after {
+.night .link a:after {
     border-bottom-color: #EAE5E4;
 }
 
-#order {
+#links {
     margin-top: 46px;
     font-size: 29px;
     font-weight: bold;
