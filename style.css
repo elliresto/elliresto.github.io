@@ -1,12 +1,18 @@
 @font-face {
     font-family: "Suisse Mono";
     src: url("fonts/SuisseIntlMono-Regular.otf");
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: "Buenos Aires";
     src: url("fonts/BuenosAires-Bold.otf");
-  }
+}
+
+:root {
+    --day-color: #EAE5E4;
+    --night-color: #18332F;
+    --nighter-color: #152725;
+}
 
 html, 
 body {
@@ -35,10 +41,11 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 h1 {
-    color: #152725;
+    color: var(--nighter-color);
     font-family: "Buenos Aires";
     font-size: 57px;
     font-weight: bold;
@@ -49,7 +56,7 @@ h1 {
 }
 
 .night h1 {
-    color: #EAE5E4;
+    color: var(--day-color);
 }
 
 #anchors {
@@ -112,25 +119,121 @@ h1 {
     top: 0;
 }
 
+#menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 82px;
+}
+
+#menu .links {
+    display: flex;
+    margin-bottom: 84px;
+}
+
+#menu .link {
+    cursor: pointer;
+}
+
+#menu .link:first-of-type {
+    margin-right: 61px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+}
+
+.table .row {
+    display: flex;
+    border-top: 1px solid var(--night-color);
+}
+
+.table .row:last-of-type {
+    border-bottom: 1px solid var(--night-color);
+}
+
+.night .table .row {
+    border-top: 1px solid var(--day-color);
+}
+
+.night .row:last-of-type {
+    border-bottom: 1px solid var(--day-color);
+}
+
+.table .column {
+    display: flex;
+    min-height: 200px;
+    padding: 18px 13px;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+
+.table .column:not(.category) {
+    width: 266px;
+}
+
+.table .column.category {
+    padding-left: 0;
+    width: 136px;
+}
+
+.table .column:not(:first-child):after {
+    background-color: var(--night-color);
+    content: '';
+    display: block;
+    height: 86%;
+    left: 50%;
+    position: absolute;
+    width: 1px;
+    left: 0;
+}
+
+.night .table .column:not(:first-child):after {
+    background-color: var(--day-color);
+}
+
+.table .element {
+    margin-bottom: 35px;
+}
+
+.table .text {
+    max-width: 75%;
+}
+
+.table .title {
+    font-family: "Buenos Aires";
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table .description {
+    margin-top: 3px;
+}
+
 #third {
     background-color: #F3EFEF;
     flex-direction: column;
 }
 
-
 #third h1 {
     margin-top: 117px;
-    margin-bottom: 68px;
+    margin-bottom: 32px;
     max-width: 800px;
 }
 
 .night #third h1,
 .night #third a {
-    color: #18332F;
+    color: var(--night-color);
 }
 
 .night #third .link a:after {
-    border-bottom-color: #18332F;
+    border-bottom-color: var(--night-color);
 }
 
 #third .links {
@@ -161,7 +264,11 @@ a {
     margin-top: 10px;
 }
 
-.link:not(.no-border) a:after {
+.link.border {
+    border-bottom: 4px solid;
+}
+
+.link:not(.no-border):not(.border) a:after {
     content: "";
     display: block;
     width: 0%;
@@ -170,16 +277,18 @@ a {
     transition: .5s;
 }
 
-.link:not(.no-border) a:hover:after {
+.link:not(.no-border):not(.border) a:hover:after {
     width: 96%;
 }
 
-.day .link a:after {
-    border-bottom-color: #18332F;
+.day .link a:after,
+.day .link.border a {
+    border-bottom-color: var(--night-color);
 }
 
-.night .link a:after {
-    border-bottom-color: #EAE5E4;
+.night .link a:after,
+.night .link.border a {
+    border-bottom-color: var(--day-color);
 }
 
 .links {
@@ -190,28 +299,29 @@ a {
 }
 
 .day {
-    background-color: #EAE5E4;
+    background-color: var(--day-color);
 }
 
 .night {
-    background-color: #152725;
+    background-color: var(--nighter-color);
 }
 
 .day,
 .day a {
-    color: #18332F;
+    color: var(--night-color);
 }
 
 .night,
 .night a {
-    color: #EAE5E4;
+    color: var(--day-color);
 }
 
 #footer {
-    background-color: #152725;
+    background-color: var(--nighter-color);
     height: 187px;
     font-family: "Buenos Aires";
     justify-content: space-evenly;
+    flex-direction: row;
 }
 
 #footer .follow {
@@ -230,7 +340,7 @@ a {
 }
 
 #footer, #footer a {
-    color: #EAE5E4;
+    color: var(--day-color);
 }
 
 #footer i {
@@ -238,6 +348,22 @@ a {
 }
 
 /* mobile styling */
+@media (max-width: 1040px) {
+    .table .row {
+        flex-direction: column;
+    }
+
+    .table .column {
+        min-height: auto;
+    }
+
+    .table .column:not(:first-child):after {
+        height: 0;
+        width: 0;
+    }
+}
+
+
 @media (max-width: 800px) {
     #switcher {
         display: none;
