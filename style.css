@@ -11,6 +11,7 @@
 html, 
 body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -49,6 +50,19 @@ h1 {
 
 .night h1 {
     color: #EAE5E4;
+}
+
+#anchors {
+    position: absolute;
+    right: 85px;
+    z-index: 1;
+    text-align: right;
+    line-height: 25px;
+    top: 25px;
+}
+
+#anchors .links {
+    font-size: 22px;
 }
 
 #switcher {
@@ -147,7 +161,7 @@ a {
     margin-top: 10px;
 }
 
-.link a:after {
+.link:not(.no-border) a:after {
     content: "";
     display: block;
     width: 0%;
@@ -156,7 +170,7 @@ a {
     transition: .5s;
 }
 
-.link a:hover:after {
+.link:not(.no-border) a:hover:after {
     width: 96%;
 }
 
