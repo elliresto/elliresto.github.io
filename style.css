@@ -78,6 +78,15 @@ h1 {
     left: 4rem;
     top: 5rem;
     z-index: 1;
+    border-radius: 50%;
+}
+
+.day #switcher {
+    background-color: var(--day-color);
+}
+
+.night #switcher {
+    background-color: var(--night-color);
 }
 
 #main {
