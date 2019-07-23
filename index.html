@@ -9,6 +9,15 @@
 
     <meta name="description" content="elli est l’endroit idéal pour conjuguer plaisir de la table et de la scène. Découvrez un endroit unique où il fait bon de se retrouver seul ou entre ami pour vivre une panoplie d’expérience. laissez vous séduire par notre menu, nos spectacles ainsi que nous soirées thématiques.">
 
+    <meta itemprop="name" content="elli">
+    <meta itemprop="description" content="elli est l’endroit idéal pour conjuguer plaisir de la table et de la scène. Découvrez un endroit unique où il fait bon de se retrouver seul ou entre ami pour vivre une panoplie d’expérience. laissez vous séduire par notre menu, nos spectacles ainsi que nous soirées thématiques.">
+    
+    <meta property="og:url" content="https://ellirestaurant.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="elli">
+    <meta property="og:description" content="elli est l’endroit idéal pour conjuguer plaisir de la table et de la scène. Découvrez un endroit unique où il fait bon de se retrouver seul ou entre ami pour vivre une panoplie d’expérience. laissez vous séduire par notre menu, nos spectacles ainsi que nous soirées thématiques.">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="16x16" href="/favicon.ico?v=2">
@@ -16,36 +25,560 @@
 
 <body>
     <img id="switcher" onclick="switchMode()">
+    <div id="anchors">
+        <div class="links">
+            <div class="link no-border">
+                <a href="#second">
+                    le concept
+                </a>
+            </div>
+            <div class="link no-border">
+                <a href="#menu">
+                    découvrez le menu
+                </a>
+            </div>
+            <div class="link no-border">
+                <a href="#third">
+                    vivez le nightlife
+                </a>
+            </div>
+        </div>
+    </div>
     <div id="main">
-        <div id="content">
-            <img id="logo">
-            <div class="block">
-                <h4>horaire</h4>
-                <p>
-                    Ouvert mercredi,jeudi vendredi et samedi
-                </p>
-                <p>
-                    17h à 22h
-                </p>
-            </div>
-            <div class="block">
-                <h4>adresse</h4>
-                <p>
-                    815 Rue Saint-Augustin, Québec, QC G1R 3N4
-                </p>
-            </div>
-            <div id="links">
-                <div class="link">
-                    <a href="http://elliresto.s3-website-us-west-2.amazonaws.com/menu.pdf" target="_blank">
-                        découvrez le menu
-                    </a>
+        <div id="first" class="section">
+            <div class="content">
+                <img id="logo">
+                <div class="block">
+                    <h4>horaire</h4>
+                    <p>
+                        Ouvert mercredi,jeudi vendredi et samedi
+                    </p>
+                    <p>
+                        17h à 22h
+                    </p>
                 </div>
-                <div class="link">
-                    <a href="https://widgets.libroreserve.com/booking/2296e6f78ea5879/QC015577708729/seat" target="_blank">
-                        réservez une table
-                    </a>
+                <div class="block">
+                    <h4>adresse</h4>
+                    <p>
+                        815 Rue Saint-Augustin, Québec, QC G1R 3N4
+                    </p>
+                </div>
+                <div class="links">
+                    <div class="link">
+                        <a href="https://widgets.libroreserve.com/booking/2296e6f78ea5879/QC015577708729/seat" target="_blank">
+                            réservez une table
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="circle"></div>
+        </div>
+        <div id="overlay"></div>
+        <div id="second"  class="section">
+            <div class="circle"></div>
+            <h1>elli est constitué des deux pronoms fondamentaux du genre soit ; elle et il.</h1>
+            <div id="menu">
+                <div class="links">
+                    <div id="food-link" class="link border">
+                        <a onclick="switchMenu('food', 'drinks')">
+                            à manger
+                        </a>
+                    </div>
+                    <div id="drinks-link" class="link">
+                        <a onclick="switchMenu('drinks', 'food')">
+                            à boire
+                        </a>
+                    </div>
+                </div>
+                <div id="food" class="table">
+                    <div class="row">
+                        <div class="column title category">
+                            le snack
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">hummus</span><span>5</span>
+                                </div>
+                                <div class="description text">
+                                    du moment
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                                <div class="element">
+                                <div class="title">
+                                    <span class="text">olives</span><span>5</span>
+                                </div>
+                                <div class="description text">
+                                    du moment
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">planche de charcuteries</span><span>5</span>
+                                </div>
+                                <div class="description text">
+                                    moutarde et légumes
+                                    marinés
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            le froid
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">taboulé de quinoa</span><span>12</span>
+                                </div>
+                                <div class="description text">
+                                    galanga, espuma de poivrons confits, copeaux de légumes aux zestes d’agrumes
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">choux-fleurs</span><span>16</span>
+                                </div>
+                                <div class="description text">
+                                    escargots, sablé de Clos-des-Roches, royale, couscous et pickle de choux-fleurs, sarrasin
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">saumon en gravlax</span><span>14.5</span>
+                                </div>
+                                <div class="description text">
+                                    poivre des dunes, raviole d’agrumes, fromage de chèvre, brocoli, lime
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">tartare de boeuf</span><span>15.5</span>
+                                </div>
+                                <div class="description text">
+                                    poireau, chips de rattes, oignons perlés
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            le chaud
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">aubergine et chou-fleur</span><span>12</span>
+                                </div>
+                                <div class="description text">
+                                    choux fleur mariné aux épices Vadouvan, déclinaison d’aubergines,légumes braisés
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">morue</span><span>18</span>
+                                </div>
+                                <div class="description text">
+                                    crumble de sésame grillé, légumes confits, purée de pommes de terre,  émulsion citron et érable
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">magret de canard</span><span>16</span>
+                                </div>
+                                <div class="description text">
+                                    céleri-rave en deux textures, sapin, miel, betteraves, noisettes
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">ris de veau</span><span>18</span>
+                                </div>
+                                <div class="description text">
+                                    glace de veau, purée de carotte et argousier, romaine grillée, fenouil confit
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            le sucré
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">crème brûlée</span><span>8</span>
+                                </div>
+                                <div class="description text">
+                                    chocolat, espuma à la bière noire, crumble de sarrasin 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                                <div class="element">
+                                <div class="title">
+                                    <span class="text">poire pochée</span><span>8.5</span>
+                                </div>
+                                <div class="description text">
+                                    gaspacho d’amande, pâte feuilletée, polenta à l’érable
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drinks" class="table hidden">
+                    <div class="row">
+                        <div class="column title category">
+                            cocktails
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">spritz martini</span><span>7</span>
+                                </div>
+                                <div class="description text">
+                                    gin Tanqueray,Vermouth blanc,
+                                    prosecco et huile de citron
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">campari twist</span><span>8.5</span>
+                                </div>
+                                <div class="description text">
+                                    Campari, Lilet,
+                                    gin Radoune,pamplemousse
+                                    et bière de gingembre
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">vanillaperol</span><span>10.5</span>
+                                </div>
+                                <div class="description text">
+                                    Aperol,Chambord,Galiano,
+                                    sirop de romarin et lime
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">italian bloody</span><span>7</span>
+                                </div>
+                                <div class="description text">
+                                    vodka Finlandia,basilic,
+                                    bitter de céleri,fumé,lime
+                                    et cornichon mariné
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">veggie margarita</span><span>10.5</span>
+                                </div>
+                                <div class="description text">
+                                    tequila El Jimador,jus de poivrons grillés,red hot,
+                                    citron et bitter de céleri
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">tokyo spice</span><span>7.5</span>
+                                </div>
+                                <div class="description text">
+                                    vodka Finlandia,sirop de rose,
+                                    gingembre,wasabi et lime
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">foggy</span><span>10.5</span>
+                                </div>
+                                <div class="description text">
+                                    gin Radoune,Soho,sirop de
+                                    thym,lime et aquafaba 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            vins blancs
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Pierre à feu</span>
+                                    <div class="prices">
+                                        <span>b 40</span>
+                                        <span>v 8</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Sauvignon
+                                    Touraine,Loire,France
+                                    2017
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Domaine du Fresche</span>
+                                    <div class="prices">
+                                        <span>b 60</span>
+                                        <span>v 12</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Chenin Blanc
+                                    Anjou,Loire,France 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Soave Classico</span>
+                                    <div class="prices">
+                                        <span>b 45</span>
+                                        <span>v 9</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Garganega
+                                    Soave,Vénétie,Italie
+                                    2016
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Domaine Dugois</span>
+                                    <div class="prices">
+                                        <span>b 60</span>
+                                        <span>v 12</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Chardonnay
+                                    Arbois,Jura,France
+                                    2013
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Drago Bianco</span>
+                                    <div class="prices">
+                                        <span>b 60</span>
+                                        <span>v 12</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Garganega
+                                    Vénétie, Italie
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Palpite</span>
+                                    <div class="prices">
+                                        <span>b 72.5</span>
+                                        <span>v 14.5</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Arinto-Verdelho-Antão Vaz
+                                    Alentejano, Portugal
+                                    2016
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            vins rouges
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Bodegas Aessir</span>
+                                    <div class="prices">
+                                        <span>b 32.5</span>
+                                        <span>v 6.5</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Bobal
+                                    Iniesta, Cuenca, Espagne
+                                    2015
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Kings Ridge</span>
+                                    <div class="prices">
+                                        <span>b 47.5</span>
+                                        <span>v 9.5</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Pinot Noir
+                                    Willamette Valley,Oregon, ÉtatsUnis
+                                    2016
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Vega Sindoa</span>
+                                    <div class="prices">
+                                        <span>b 35</span>
+                                        <span>v 7</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Tempranillo
+                                    Navarra, Espagne
+                                    2016
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">À tout de suite</span>
+                                    <div class="prices">
+                                        <span>b 55</span>
+                                        <span>v 11</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Pinot Noir
+                                    Willamette Valley,Oregon, ÉtatsUnis
+                                    2017
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Pure</span>
+                                    <div class="prices">
+                                        <span>b 35</span>
+                                        <span>v 7</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Cabernet Franc
+                                    Domaine de Brau,Pays D’Oc,
+                                    France
+                                    2013
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">L’Arco</span>
+                                    <div class="prices">
+                                        <span>b 55</span>
+                                        <span>v 11</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Corvina-RondinellaMolinara-Sangiovese
+                                    Valpolicella,Vérone,Italie
+                                    2015
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            bulles rosé
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Baga Luis Pato</span><span>b 36</span>
+                                </div>
+                                <div class="description text">
+                                    Baga
+                                    Bairrada, Anadia, Portugal
+                                    2016
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            champagne
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Alfred Basely</span><span>b 64</span>
+                                </div>
+                                <div class="description text">
+                                    Brut, Champagne
+                                    Champillon, France
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column title category">
+                            vin de dessert
+                        </div>
+                        <div class="column">
+                            <div class="element">
+                                <div class="title">
+                                    <span class="text">Domaine de la Tour Vieille</span>
+                                    <div class="prices">
+                                        <span>b 50</span>
+                                        <span>500ml</span>
+                                    </div>
+                                </div>
+                                <div class="description text">
+                                    Grenache-Mourvèdre-Syrah
+                                    Banyuls, Languedoc, France
+                                    2017
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="third" class="section">
+            <h1>prolongez votre expérience au cabaret club le drague</h1>
+            <div class="links">
+                <div class="link">
+                    <a href="http://ledrague.com/" target="_blank">
+                        vivez le nightlife
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="section">
+            <div class="follow">
+                <p>suivez-nous</p>
+                <a href="https://www.facebook.com/elliresto/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com/elli_resto/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+            </div>
+            <a href="mailto:elliresto@gmail.com" target="_blank">elliresto@gmail.com</a>
         </div>
     </div>
 
@@ -60,6 +593,14 @@
         const switchMode = () => {
             const actualMode = document.getElementsByTagName('body')[0].classList[0]
             setMode(actualMode === 'day'? 'night': 'day')
+        }
+
+        const switchMenu = (show, hide) => {
+            document.getElementById(hide).classList.add('hidden')
+            document.getElementById(show).classList.remove('hidden')
+
+            document.getElementById(`${show}-link`).classList.add('border')
+            document.getElementById(`${hide}-link`).classList.remove('border')
         }
 
         const currentHour = new Date().getHours()
