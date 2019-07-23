@@ -60,7 +60,7 @@ h1 {
 }
 
 #anchors {
-    position: absolute;
+    position: fixed;
     right: 85px;
     z-index: 1;
     text-align: right;
@@ -73,7 +73,7 @@ h1 {
 }
 
 #switcher {
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     left: 4rem;
     top: 5rem;
@@ -137,6 +137,7 @@ h1 {
 #menu .links {
     display: flex;
     margin-bottom: 84px;
+    margin-top: 89px;
 }
 
 #menu .link {
@@ -150,6 +151,21 @@ h1 {
 .table {
     display: flex;
     flex-direction: column;
+    transition: opacity 1s linear;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+.table.hidden {
+    opacity: 0;
+    transition: opacity 1s linear;
+    visibility: hidden;
+    height: 0;
+}
+
+.table.hidden .row {
+    display: none;
 }
 
 .table .row {
@@ -226,6 +242,8 @@ h1 {
 
 .table .description {
     margin-top: 3px;
+    font-size: 17px;
+    line-height: 22px;
 }
 
 #third {
@@ -377,6 +395,10 @@ a {
 
 
 @media (max-width: 800px) {
+    #anchors {
+        position: absolute;
+    }
+
     #switcher {
         display: none;
     }
