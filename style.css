@@ -104,31 +104,31 @@ h1 {
     background-size: cover;
 }
 
-#first {
-    height: 974px;
+#infos {
+    height: 1008px;
 }
 
-#first .content {
+#infos .content {
     max-width: 255px;
     align-self: center;
 }
 
-#first .content img {
+#infos .content img {
     margin-bottom: 102px;
 }
 
-#first .circle {
+#infos .circle {
     border-top-left-radius: 792px;
     border-top-right-radius: 792px;
     bottom: 0px;
     right: 85px;
 }
 
-#second h1 {
+#concept h1 {
     margin-top: 47px;
 }
 
-#second .circle {
+#concept .circle {
     border-bottom-left-radius: 792px;
     border-bottom-right-radius: 792px;
     left: 249px;
@@ -153,7 +153,7 @@ h1 {
     cursor: pointer;
 }
 
-#menu .link:first-of-type {
+#menu .link:infos-of-type {
     margin-right: 61px;
 }
 
@@ -211,7 +211,7 @@ h1 {
     width: 136px;
 }
 
-.table .column:not(:first-child):after {
+.table .column:not(:infos-child):after {
     background-color: var(--night-color);
     content: '';
     display: block;
@@ -222,7 +222,7 @@ h1 {
     left: 0;
 }
 
-.night .table .column:not(:first-child):after {
+.night .table .column:not(:infos-child):after {
     background-color: var(--day-color);
 }
 
@@ -255,27 +255,27 @@ h1 {
     line-height: 22px;
 }
 
-#third {
+#nightlife {
     background-color: #F3EFEF;
     flex-direction: column;
 }
 
-#third h1 {
+#nightlife h1 {
     margin-top: 117px;
     margin-bottom: 32px;
     max-width: 800px;
 }
 
-.night #third h1,
-.night #third a {
+.night #nightlife h1,
+.night #nightlife a {
     color: var(--night-color);
 }
 
-.night #third .link a:after {
+.night #nightlife .link a:after {
     border-bottom-color: var(--night-color);
 }
 
-#third .links {
+#nightlife .links {
     margin-bottom: 75px;
 }
 
@@ -396,7 +396,7 @@ a {
         min-height: auto;
     }
 
-    .table .column:not(:first-child):after {
+    .table .column:not(:infos-child):after {
         height: 0;
         width: 0;
     }
