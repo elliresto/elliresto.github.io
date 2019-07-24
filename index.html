@@ -593,6 +593,8 @@
         const switchMode = () => {
             const actualMode = document.getElementsByTagName('body')[0].classList[0]
             setMode(actualMode === 'day'? 'night': 'day')
+
+            window.scrollTo(0,0)
         }
 
         const switchMenu = (show, hide) => {

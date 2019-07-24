@@ -317,7 +317,7 @@ a {
 }
 
 .link:not(.no-border):not(.border) a:hover:after {
-    width: 96%;
+    width: 100%;
 }
 
 .day .link a:after,
@@ -384,6 +384,10 @@ a {
 
 #footer i {
     padding: 0 16px;
+}
+
+#footer a:hover {
+    color: #CCC4C3;
 }
 
 /* mobile styling */
