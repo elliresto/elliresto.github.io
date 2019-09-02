@@ -581,6 +581,12 @@
             <a href="mailto:elliresto@gmail.com" target="_blank">elliresto@gmail.com</a>
         </div>
     </div>
+    <script type="module">
+        (async () => {
+            const { getMenu } = await import('./js/api.js');
+            const menu = getMenu();
+        })();
+    </script>
 
     <script>
         const setMode = (mode) => {
