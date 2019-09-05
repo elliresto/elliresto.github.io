@@ -1,5 +1,4 @@
-// TODO use proper endpoint
-const endpoint = "https://elliresto.s3.amazonaws.com/menu.json";
+const endpoint = "https://elli-resto.s3.amazonaws.com/menu.json";
 
 export const getMenu = async () => {
     const response = await fetch(endpoint);
