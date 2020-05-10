@@ -427,6 +427,11 @@ a {
         padding: 0;
     }
 
+    #order-content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     #footer {
         flex-direction: column;
     }
