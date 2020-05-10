@@ -27,7 +27,7 @@
 <body>
     <script id="menu_template" type="text/x-handlebars-template">
         <div id="food" class="table">
-            {{#food.categories}}
+            {{#takeout.categories}}
                 <div class="row">
                     <div class="column title category">
                         {{name}}
@@ -48,31 +48,7 @@
                     </div>
                     {{/groupBy}}
                 </div>
-            {{/food.categories}}
-        </div>
-        <div id="drinks" class="table hidden">
-            {{#drinks.categories}}
-                <div class="row">
-                    <div class="column title category">
-                        {{name}}
-                    </div>
-                    {{#groupBy values}}
-                    <div class="column">
-                        {{ text }}
-                        {{#elements}}
-                        <div class="element">
-                            <div class="title">
-                                <span class="text">{{name}}</span><span>{{price}}</span>
-                            </div>
-                            <div class="description text">
-                                {{description}}
-                            </div>
-                        </div>
-                        {{/elements}}
-                    </div>
-                    {{/groupBy}}
-                </div>
-            {{/drinks.categories}}
+            {{/takeout.categories}}
         </div>
     </script>
 
@@ -86,12 +62,12 @@
             </div>
             <div class="link no-border">
                 <a href="#menu">
-                    découvrez le menu
+                    menu pour emporter
                 </a>
             </div>
             <div class="link no-border">
-                <a href="#nightlife">
-                    vivez le nightlife
+                <a href="#order">
+                    commande et livraison
                 </a>
             </div>
         </div>
@@ -101,24 +77,33 @@
             <div class="content">
                 <img id="logo">
                 <div class="block">
-                    <h4>horaire</h4>
+                    <h4>cueillette sur place</h4>
                     <p>
-                        Ouvert mercredi,jeudi vendredi et samedi
+                        Pré-commande le <span class="underline">lundi,</span>
+                    </p>
+                    <p class="underline">
+                        mardi et mercredi
                     </p>
                     <p>
-                        17h à 22h
+                        entre <span class="underline">11h et 15h</span>
                     </p>
                 </div>
                 <div class="block">
-                    <h4>adresse</h4>
+                    <h4>livraison</h4>
                     <p>
-                        815 Rue Saint-Augustin, Québec, QC G1R 3N4
+                        Pré-commande le <span class="underline">lundi</span> et
+                    </p>
+                    <p>
+                        livraison le <span class="underline">mardi</span> entre
+                    </p>
+                    <p class="underline">
+                        10h et 15h
                     </p>
                 </div>
                 <div class="links">
                     <div class="link">
-                        <a href="https://widgets.libroreserve.com/booking/2296e6f78ea5879/QC015577708729/seat" target="_blank">
-                            réservez une table
+                        <a href="tel:+1-581-990-3639">
+                            581-990-3639
                         </a>
                     </div>
                 </div>
@@ -132,34 +117,71 @@
             <div id="menu">
                 <div class="links">
                     <div id="food-link" class="link border">
-                        <a onclick="switchMenu('food', 'drinks')">
-                            à manger
-                        </a>
-                    </div>
-                    <div id="drinks-link" class="link">
-                        <a onclick="switchMenu('drinks', 'food')">
-                            à boire
+                        <a>
+                            à emporter
                         </a>
                     </div>
                 </div>
                 <div id="menu-content"></div>
             </div>
         </div>
-        <div id="nightlife" class="section">
-            <h1>prolongez votre expérience au cabaret club le drague</h1>
-            <div class="links">
-                <div class="link">
-                    <a href="http://ledrague.com/" target="_blank">
-                        vivez le nightlife
-                    </a>
+        <div id="order" class="section">
+            <div class="circle"></div>
+            <div>
+                <h1>cueillette sur place</h1>
+                <br>
+                <div>
+                    <div>
+                        <p>Pré-commande le <span class="underline">lundi, mardi et mercredi</span></p>
+                        <p>entre <span class="underline">11h et 15h</span></p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>la récupération de votre commande se fait</p>
+                        <p><span class="underline">au minimum le lendemain</span> de la pré-commande</p>
+                        <p>du <span class="underline">mardi au vendredi</span> entre <span class="underline">16h et 18h</span></p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>paiement par crédit seulement</p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>récupération de votre commande sur place</p>
+                        <p>815 rue Saint-Augustin, QC</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h1>livraison</h1>
+                <br>
+                <div>
+                    <div>
+                        <p>Pré-commande le <span class="underline">lundi</span> et livraison le <span class="underline">mardi</span></p>
+                        <p>entre <span class="underline">10h et 15h</span></p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>livraison dans un rayon de 10 KM et des</p>
+                        <p>frais de 5$ seront ajoutés</p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>paiement par crédit seulement</p>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        <p class="bold">bon appétit!</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="footer" class="section">
             <div class="follow">
                 <p>suivez-nous</p>
-                <a href="https://www.facebook.com/elliresto/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                <a href="https://www.instagram.com/elli_resto/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                <a href="https://www.facebook.com/elliresto/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/elli_resto/" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
             <a href="mailto:elliresto@gmail.com" target="_blank">elliresto@gmail.com</a>
         </div>
