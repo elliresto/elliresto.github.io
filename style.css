@@ -133,10 +133,6 @@ h1 {
     right: 85px;
 }
 
-#infos .link {
-    width: 170px;
-}
-
 #concept h1 {
     margin-top: 47px;
 }
@@ -303,7 +299,7 @@ a {
 }
 
 .link:not(.no-border):not(.border) a:hover:after {
-    width: 100%;
+    width: 170px;
 }
 
 .day .link a:after,
