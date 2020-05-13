@@ -352,6 +352,11 @@ a {
     max-width: 800px;
 }
 
+.night #order,
+.night #order h1 {
+    color: var(--night-color);
+}
+
 #footer {
     background-color: var(--nighter-color);
     height: 187px;
