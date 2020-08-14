@@ -109,12 +109,16 @@ h1 {
 }
 
 #infos .content {
-    max-width: 255px;
+    max-width: 355px;
     align-self: center;
 }
 
 #infos .content img {
     margin-bottom: 102px;
+}
+
+#infos .link {
+    display: inline-block;
 }
 
 #infos .circle {
@@ -410,6 +414,7 @@ a {
 @media (max-width: 800px) {
     #anchors {
         position: absolute;
+        right: 50px;
     }
 
     #switcher {
