@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="16x16" href="/favicon.ico?v=2">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
 </head>
 
 <body>
@@ -137,7 +138,11 @@
             </div>
             <div class="circle"></div>
         </div>
-        <div id="overlay"></div>
+        <div class="overlay-carousel siema">
+            <div class="overlay first"></div>
+            <div class="overlay second"></div>
+            <div class="overlay third"></div>
+        </div>
         <div id="concept"  class="section">
             <div class="circle"></div>
             <div class="flex flex-column title">
@@ -234,6 +239,11 @@
         const body = document.getElementsByTagName('body')[0]
         const mode = currentHour >= 7 && currentHour < 19 ? 'day' : 'night'
         setMode(mode)
+
+        // init carousel
+        new Siema({
+            loop: true
+        });
     </script>
 </body>
 

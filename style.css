@@ -103,11 +103,27 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+.overlay-carousel {
+    width: 100%;
+}
 
-#overlay {
-    background: url('images/overlay.jpg') no-repeat center center;
+.overlay-carousel .overlay {
     width: 100%;
     min-height: 100vh;
+}
+
+.overlay-carousel .overlay.first {
+    background: url('images/overlay.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.overlay-carousel .overlay.second {
+    background: url('images/overlay2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.overlay-carousel .overlay.third {
+    background: url('images/overlay3.jpg') no-repeat center center;
     background-size: cover;
 }
 
